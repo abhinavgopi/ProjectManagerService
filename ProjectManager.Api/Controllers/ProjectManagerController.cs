@@ -203,7 +203,7 @@ namespace ProjectManager.Api.Controllers
         }
 
         [Route("api/User/UpdateUser")]
-        [HttpPut]
+        [HttpPut] 
         public IHttpActionResult UpdateUser(User user)
         {
             ProjectManager_BL projectManager = new ProjectManager_BL();
