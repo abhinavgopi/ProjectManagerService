@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.props" Condition="Exists('..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.props')" />
+  <Import Project="..\packages\NBench.1.2.2\build\NBench.props" Condition="Exists('..\packages\NBench.1.2.2\build\NBench.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B7D23B91-2512-4770-B4CC-1B19FCA81311}</ProjectGuid>
+    <ProjectGuid>{50E58F46-D2D8-4FB8-BD2B-1B911A67A69E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjectManager.NBench</RootNamespace>
@@ -33,17 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\ProjectManager.Api\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\ProjectManager.Api\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="NBench, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\ProjectManager.Api\packages\NBench.1.2.2\lib\net452\NBench.dll</HintPath>
+      <HintPath>..\packages\NBench.1.2.2\lib\net452\NBench.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -57,11 +50,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Backup\ProjectManager.API\ProjectManager.BLTest\ProjectManager.BLTest.csproj">
+    <ProjectReference Include="..\..\..\..\..\Backup\ProjectManager.API\ProjectManager.BLTest\ProjectManager.BLTest.csproj">
       <Project>{e3f915f1-5496-4ca8-bb78-b3eefd3c0912}</Project>
       <Name>ProjectManager.BLTest</Name>
     </ProjectReference>
@@ -71,8 +63,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.props')" Text="$([System.String]::Format('$(ErrorText)', '..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.props'))" />
-    <Error Condition="!Exists('..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.targets'))" />
+    <Error Condition="!Exists('..\packages\NBench.1.2.2\build\NBench.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NBench.1.2.2\build\NBench.props'))" />
+    <Error Condition="!Exists('..\packages\NBench.1.2.2\build\NBench.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NBench.1.2.2\build\NBench.targets'))" />
   </Target>
-  <Import Project="..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.targets" Condition="Exists('..\ProjectManager.Api\packages\NBench.1.2.2\build\NBench.targets')" />
+  <Import Project="..\packages\NBench.1.2.2\build\NBench.targets" Condition="Exists('..\packages\NBench.1.2.2\build\NBench.targets')" />
 </Project>
